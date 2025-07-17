@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="card-header" appBigHeader>
+    {{ isEdit ? 'Editar Alumno' : 'Nuevo Alumno' }}
+  </div>
+  <div class="card-body">
+    <form [formGroup]="alumnoForm" (ngSubmit)="guardarAlumno()">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+            <mat-error *ngIf="alumnoForm.get('nombre')?.hasError('required')">
+              El nombre es requerido
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido">
+            <mat-error *ngIf="alumnoForm.get('apellido')?.hasError('required')">
+              El apellido es requerido
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Edad</mat-label>
+            <input matInput type="number" formControlName="edad">
+            <mat-error *ngIf="alumnoForm.get('edad')?.hasError('required')">
+              La edad es requerida
+            </mat-error>
+            <mat-error *ngIf="alumnoForm.get('edad')?.hasError('min') || alumnoForm.get('edad')?.hasError('max')">
+              La edad debe estar entre 15 y 99 años
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+            <mat-error *ngIf="alumnoForm.get('email')?.hasError('required')">
+              El email es requerido
+            </mat-error>
+            <mat-error *ngIf="alumnoForm.get('email')?.hasError('email')">
+              Ingrese un email válido
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Curso</mat-label>
+            <mat-select formControlName="curso">
+              <mat-option value="Angular">Angular</mat-option>
+              <mat-option value="React">React</mat-option>
+              <mat-option value="Vue">Vue</mat-option>
+              <mat-option value="Node.js">Node.js</mat-option>
+            </mat-select>
+            <mat-error *ngIf="alumnoForm.get('curso')?.hasError('required')">
+              El curso es requerido
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="text-end">
+        <button type="button" mat-raised-button class="me-2" routerLink="/alumnos">
+          Cancelar
+        </button>
+        <button type="submit" mat-raised-button color="primary">
+          {{ isEdit ? 'Actualizar' : 'Guardar' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
