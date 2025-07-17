@@ -1,27 +1,81 @@
-# TablaAlumno
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.20.
+# 🎓 Gestión de Alumnos - Angular
 
-## Development server
+Aplicación para administrar alumnos con tabla interactiva, formularios reactivos y pipes personalizados.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Características Principales
 
-## Code scaffolding
+- **Tabla de alumnos** con Angular Material
+- **Formulario reactivo** para ABM (Altas, Bajas y Modificaciones)
+- **Pipes personalizados**:
+  - `fullName`: Muestra nombre completo
+  - `formatDate`: Formatea fechas
+  - `age`: Calcula edad
+- **Directiva personalizada** para estilos de títulos
+- **Diseño responsive**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tecnologías Utilizadas
 
-## Build
+- Angular 18
+- Angular Material
+- Standalone Components
+- Reactive Forms
+- RxJS (BehaviorSubject)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📂 Estructura del Proyecto
 
-## Running unit tests
+src/app/
+├── components/
+│ ├── alumno-form/ # Formulario CRUD
+│ └── alumno-lista/ # Tabla interactiva
+├── directives/ # Directivas
+├── models/ # Interfaces
+├── pipes/ # Pipes
+└── services/ # Lógica de datos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## 🔧 Instalación
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clonar repositorio
+2. Instalar dependencias:
+---------
+npm install
 
-## Further help
+Ejecutar aplicación con  ( ng serve )
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Funcionalidades Clave
+Tabla de Alumnos
+
+Visualización en formato tabla
+Ordenamiento y paginación
+Acciones de edición/eliminación
+Formulario Reactivo
+Validación de campos
+Manejo de fechas
+Guardado/actualización de datos
+
+
+Pipes Personalizados:
+
+{{ alumno | fullName }} → "Juan Pérez"
+{{ alumno.fechaNacimiento | age }} → "22 años"
+{{ fecha | formatDate }} → "15/05/2023"
+
+Ejemplo de flujo:
+
+Formulario envía datos → Servicio actualiza estado → Tabla se actualiza automáticamente.
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+## 📸 Capturas
+
+<img src="./imagenes/captura-1.png" width="400">
+<img src="./imagenes/captura-2.png" width="400">
+<img src="./imagenes/captura-3.png" width="400">
+<img src="./imagenes/captura-4.png" width="400">
+<img src="./imagenes/captura-5.png" width="400">
+<img src="./imagenes/captura-6.png" width="400">
+<img src="./imagenes/captura-7.png" width="400">
+<img src="./imagenes/captura-8.png" width="400">
+<img src="./imagenes/captura-9.png" width="400">
+
+
