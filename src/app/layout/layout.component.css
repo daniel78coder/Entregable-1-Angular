@@ -1,0 +1,35 @@
+.simple-navigator {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav-options {
+  display: flex;
+  background-color: #bbbdbf;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-options a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #495057;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-options a:hover {
+  background-color: #a7a9ac;
+}
+
+.nav-options a.active {
+  background-color: #2c3fea;
+  color: white;
+}
+
+.content-container {
+  padding: 1rem;
+  flex-grow: 1;
+}
