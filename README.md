@@ -1,4 +1,3 @@
-
 # 🎓 Gestión de Alumnos - Angular
 
 Aplicación para administrar alumnos con tabla interactiva, formularios reactivos y pipes personalizados.
